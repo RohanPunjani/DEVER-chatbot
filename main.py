@@ -52,12 +52,7 @@ def response(user_response):
     vals = cosine_similarity(tfidf[-1], tfidf)
     #idx = vals.argsort()[0][-2]
     idx = vals.argsort()[0][-2]
-    # i need to generate random output
-    # this chooses the most precise one
-    # need to work out on it more
-    print(idx)
     flat = vals.flatten()
-    print(flat)
     flat.sort()
     req_tfidf = flat[-2]
     if(req_tfidf == 0):
